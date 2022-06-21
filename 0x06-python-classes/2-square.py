@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This is a class that defines a Square based on 0-square.py"""
+"""This is a class that defines a Square based on 1-square.py"""
 
 
 class Square(object):
