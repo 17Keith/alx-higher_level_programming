@@ -4,9 +4,14 @@ A class that defines a rectangle based on 5-rectangle.py
 """
 
 
+import numbers
+
+
 class Rectangle:
-    number_of_instances = 0
+
     """ Class that defines a rectangle """
+
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """ Method that initializes the instance
@@ -36,13 +41,12 @@ class Rectangle:
             TypeError: if width is not an integer
             ValueError: if width is less than zero
         """
-
+        Rectangle.number_of_instances += 1
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self.__width = value
-        Rectangle.number_of_instances += 1
+        self.__width = value   
 
     @property
     def height(self):
