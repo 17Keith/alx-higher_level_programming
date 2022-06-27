@@ -80,8 +80,8 @@ class Rectangle:
 
     def perimeter(self):
         """ Method that calculates the Rectangle perimeter
-        Returns:    
-            rectangle perimeter 
+        Returns:
+            rectangle perimeter
         """
 
         if self.width == 0 or self.height == 0:
