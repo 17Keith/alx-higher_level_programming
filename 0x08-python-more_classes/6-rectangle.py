@@ -42,6 +42,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
+        Rectangle.number_of_instances += 1
 
     @property
     def height(self):
@@ -117,5 +118,5 @@ class Rectangle:
         Method that prints 'Bye Rectangle...' \
             when an instance of Rectangle is deleted
         """
-        Rectangle.number_of_instances -= 1
+        Rectangle.number_of_instances += -1
         print("Bye rectangle...")
