@@ -109,7 +109,7 @@ class Rectangle:
         """
 
         return "Rectangle({:d}, {:d})".format(self.width, self.height)
-    
+
     def __del__(self):
         """
         Method that prints 'Bye Rectangle...' when an instance of Rectangle is deleted
