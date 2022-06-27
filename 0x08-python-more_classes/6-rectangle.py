@@ -5,6 +5,7 @@ A class that defines a rectangle based on 5-rectangle.py
 
 
 class Rectangle:
+    number_of_instances = 0
     """ Class that defines a rectangle """
 
     def __init__(self, width=0, height=0):
@@ -45,7 +46,7 @@ class Rectangle:
     @property
     def height(self):
         """ method that returns the value of the height
-        Returns:
+            Returns:
             rectangle height
         """
 
@@ -77,8 +78,8 @@ class Rectangle:
 
     def perimeter(self):
         """ Method that calculates the Rectangle perimeter
-        Returns:
-            rectangle perimeter
+        Returns:    
+            rectangle perimeter 
         """
 
         if self.width == 0 or self.height == 0:
@@ -103,7 +104,8 @@ class Rectangle:
         return rectangle[:-1]
 
     def __repr__(self):
-        """ Method that returns the string represantion of the instance
+        """ Method that returns the string \
+            represantion of the instance
         Returns:
             string represenation of the object
         """
@@ -115,5 +117,5 @@ class Rectangle:
         Method that prints 'Bye Rectangle...' \
             when an instance of Rectangle is deleted
         """
-
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
