@@ -4,9 +4,6 @@ A class that defines a rectangle based on 5-rectangle.py
 """
 
 
-import numbers
-
-
 class Rectangle:
 
     """ Class that defines a rectangle """
