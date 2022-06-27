@@ -46,6 +46,6 @@ def matrix_divided(matrix, div):
                     raise TypeError(wrong_type)
                 new_matrix[count][val] = round(item / div, 2)
     except:
-        raise TypeError("Each row of the matrix must have the same size")
+        raise
     else:
         return (new_matrix)
