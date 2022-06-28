@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Defines a LOckedClass
+Define a class by: LockedClass
 """
 class LockedClass():
     __slots__ = "first_name"
