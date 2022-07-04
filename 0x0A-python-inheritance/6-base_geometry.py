@@ -4,6 +4,7 @@
 
 
 class BaseGeometry:
+    """Empty class"""
     
     def area(self):
 
