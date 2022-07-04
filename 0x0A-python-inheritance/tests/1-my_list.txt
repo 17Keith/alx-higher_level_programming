@@ -1,40 +1,53 @@
+=============================
 The ``1-my_list`` module
-==========================
+=============================
 
 Using ``MyList``
-----------------
+---------------------
 
 Import:
-MyList = __import__('1-my_list').MyList
+
+    >>> MyList = __import__('1-my_list').MyList
 
 Tests:
 
-Regular function:
+    >>> my_list = MyList()
 
-list1 = MyList
-list1 = MyList([1, 2, 3, 4, 5])
-list1.print_sorted()
-[1, 2, 3, 4, 5]
+    >>> my_list
+    []
 
-list2 = MyList([5, 4, 3, 2, 1])
-list2.print_sorted()
-[1, 2, 3, 4, 5]
+    >>> my_list.append(1)
 
-list3 = MyList([4, 1, 5, 2, 3])
-list3.print_sorted()
-[1, 2, 3, 4, 5]
+    >>> my_list.append(4)
 
-list4 = MyList([4])
-list4.print_sorted()
-[4]
+    >>> my_list.append(2)
 
-list5 = MyList()
-list5.print_sorted()
-[]
+    >>> my_list
+    [1, 4, 2]
 
+    >>> my_list.print_sorted()
+    [1, 2, 4]
 
-Invalid arguments:
+    >>> my_list
+    [1, 4, 2]
 
-list1.print_sorted(5)
-Traceback (most recent call last):
-TypeError: print_sorted() takes 1 positional argument but 2 were given
+    >>> my_list = MyList([3, 6, 2])
+
+    >>> my_list
+    [3, 6, 2]
+
+    >>> my_list.print_sorted()
+    [2, 3, 6]
+
+    >>> my_list = MyList("hello")
+    
+    >>> my_list
+    ['h', 'e', 'l', 'l', 'o']
+
+    >>> my_list.print_sorted()
+    ['e', 'h', 'l', 'l', 'o']
+
+    >>> new_l = MyList()
+
+    >>> new_l.print_sorted()
+    []
