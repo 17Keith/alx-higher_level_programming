@@ -3,6 +3,8 @@
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
+import io
+import contextlib
 
 
 class TestRectangle(unittest.TestCase):
@@ -114,4 +116,25 @@ class TestRectangle(unittest.TestCase):
             r1.area("Hello")
         self.assertEqual(
             "area() takes 1 positional argument but 2 were given", str(
+                x.exception))
+
+    def test_5_0(self):
+        """Test for public method display."""
+
+        f = io.StringIO()
+        r1 = Rectangle(4, 5)
+        with contextlib.redirect_stdout(f):
+            r1.display()
+        s = f.getvalue()
+        res = "####\n####\n####\n####\n####\n"
+        self.assertEqual(s, res)
+
+    def test_5_1(self):
+        """Test for public method display with wrong args."""
+
+        with self.assertRaises(TypeError) as x:
+            r1 = Rectangle(9, 6)
+            r1.display(9)
+        self.assertEqual(
+            "display() takes 1 positional argument but 2 were given", str(
                 x.exception))
