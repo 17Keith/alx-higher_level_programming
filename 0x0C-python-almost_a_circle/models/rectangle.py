@@ -1,5 +1,6 @@
 #!/usr/bin/pyhton3
 """A Rectangle Class that inherits from Base"""
+
 from models.base import Base
 
 
@@ -108,12 +109,6 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """Updates attributes of an instance.
-        Args:
-            - id attribute
-            - width attribute
-            - height attribute
-            - x attribute
-            - y attribute
         """
 
         if args is not None and len(args) != 0:
@@ -143,3 +138,10 @@ class Rectangle(Base):
                     self.x = value
                 if key == "y":
                     self.y = value
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Rectangle."""
+
+        my_dict = {'id': self.id, 'width': self.__width,
+                   'height': self.__height, 'x': self.__x, 'y': self.__y}
+        return my_dict
