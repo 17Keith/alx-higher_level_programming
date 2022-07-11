@@ -3,7 +3,7 @@
 
 
 class Base:
-    """Base class with a private class attribute: 
+    """Base class with a private class attribute:
         __nb_objects = 0"""
 
     __nb_objects = 0
