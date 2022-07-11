@@ -39,7 +39,6 @@ class Rectacngle(Base):
 
         return self.__y
 
-
     @width.setter
     def width(self, value):
         """Sets the width attribute."""
