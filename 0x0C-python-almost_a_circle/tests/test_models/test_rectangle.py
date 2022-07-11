@@ -4,6 +4,7 @@ import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 
+
 class TestRectangle(unittest.TestCase):
     """Test cases for the Rectangle class."""
 
