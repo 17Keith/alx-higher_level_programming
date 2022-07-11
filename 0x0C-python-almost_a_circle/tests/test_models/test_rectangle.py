@@ -138,3 +138,25 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(
             "display() takes 1 positional argument but 2 were given", str(
                 x.exception))
+
+    def test_6_0(self):
+        """Test for __str__ representation."""
+
+        f = io.StringIO()
+        r1 = Rectangle(4, 6, 2, 1, 12)
+        with contextlib.redirect_stdout(f):
+            print(r1)
+        s = f.getvalue()
+        res = "[Rectangle] (12) 2/1 - 4/6\n"
+        self.assertEqual(s, res)
+
+    def test_7_0(self):
+        """Test for public method display with x and y."""
+
+        f = io.StringIO()
+        r1 = Rectangle(2, 3, 2, 2)
+        with contextlib.redirect_stdout(f):
+            r1.display()
+        s = f.getvalue()
+        res = "\n\n  ##\n  ##\n  ##\n"
+        self.assertEqual(s, res)
