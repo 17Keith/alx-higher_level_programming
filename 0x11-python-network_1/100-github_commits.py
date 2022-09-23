@@ -9,7 +9,8 @@ if __name__ == "__main__":
     ownername = argv[2]
 
     r = requests.get(
-        'https://api.github.com/repos/{}/{}/commits'.format(reponame, ownername))
+        'https://api.github.com/repos/{}/{}/commits'
+        .format(reponame, ownername))
     if r.status_code >= 400:
         print('None')
     else:
